@@ -2,31 +2,31 @@ git:
     problems:
         url: https://github.com/getgrav/grav-plugin-problems
         path: user/plugins/problems
-        branch: develop
+        branch: master
     error:
         url: https://github.com/getgrav/grav-plugin-error
         path: user/plugins/error
-        branch: develop
+        branch: master
     breadcrumbs:
         url: https://github.com/getgrav/grav-plugin-breadcrumbs
         path: user/plugins/breadcrumbs
-        branch: develop    
+        branch: master    
     anchors:
         url: https://github.com/getgrav/grav-plugin-anchors
         path: user/plugins/anchors
-        branch: develop
+        branch: master
     highlight:
         url: https://github.com/getgrav/grav-plugin-highlight
         path: user/plugins/highlight
-        branch: develop
+        branch: master
     simplesearch:
         url: https://github.com/getgrav/grav-plugin-simplesearch
         path: user/plugins/simplesearch
-        branch: develop
+        branch: master
     learn2:
         url: https://github.com/getgrav/grav-theme-learn2
         path: user/themes/learn2
-        branch: develop
+        branch: master
 links:
     problems:
         src: grav-plugin-problems
