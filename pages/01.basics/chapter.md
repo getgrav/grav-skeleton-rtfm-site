@@ -1,11 +1,11 @@
 ---
-title: Basics
+title: Основы
 taxonomy:
     category: docs
 ---
 
-### Chapter 1
+### Глава 1
 
-# Basics
+# Основы
 
-Discover the **basic** principals
+Знакомство с **основными** понятиями
