@@ -26,7 +26,7 @@ jobs:
       - name: Extract Tag
         run: echo "SKELETON_VERSION=${{ github.event.inputs.tag || github.ref }}" >> $GITHUB_ENV
       - name: Generate Skeleton Packages
-        uses: w00fz/skeleton-builder@main
+        uses: getgrav/skeleton-builder@v1
         with:
           version: ${{ github.event.inputs.version || 'latest' }}
           admin: ${{ github.event.inputs.admin || true }}
