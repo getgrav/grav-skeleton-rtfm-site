@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Target tag for re-upload'     
+        description: 'Target tag for re-upload'
         required: true
         default: ''
       version:
@@ -14,22 +14,22 @@ on:
         required: true
         default: 'latest'
       admin:
-        description: 'Create also a package with Admin'
+        description: 'Also build a legacy +admin package (Grav 1.x only; admin2 is already bundled)'
         required: true
-        default: true
+        default: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Extract Tag
-        run: echo "SKELETON_VERSION=${{ github.event.inputs.tag || github.ref }}" >> $GITHUB_ENV
+        run: echo "SKELETON_VERSION=${{ github.event.inputs.tag || github.ref_name }}" >> $GITHUB_ENV
       - name: Generate Skeleton Packages
         uses: getgrav/skeleton-builder@v1
         with:
           version: ${{ github.event.inputs.version || 'latest' }}
-          admin: ${{ github.event.inputs.admin || true }}
+          admin: ${{ github.event.inputs.admin || false }}
       - name: Upload packages to release
         uses: svenstaro/upload-release-action@v2
         with:
